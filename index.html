@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header id="resumeHeader" style="display:none;">
+        <img id="profilePic" src="./img/profile.jpg" alt="Profile Picture" />
+        <div class="header-text">
+            <h1 id="displayName">Your Name</h1>
+            <p id="displayEmail">your.email@example.com | +1234567890</p>
+        </div>
+    </header>
+
+    <section id="educationSection" style="display:none;">
+        <h2>Education</h2>
+        <p id="displayEducation">Your Education Details</p>
+    </section>
+
+    <section id="skillsSection" style="display:none;">
+        <h2>Skills</h2>
+        <ul id="displaySkills">
+            <li>Your Skills</li>
+        </ul>
+    </section>
+
+    <section id="experienceSection" style="display:none;">
+        <h2>Work Experience</h2>
+        <div id="displayExperience">
+            <h3>Your Job Title</h3>
+            <p>Your Job Description</p>
+        </div>
+    </section>
+
+    <form id="resumeForm">
+        <h3>Personal Information</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required />
+
+        <h3>Upload Profile Picture</h3>
+        <label for="profilePicInput">Profile Picture:</label>
+        <input type="file" id="profilePicInput" accept="image/*" required />
+
+        <h3>Education</h3>
+        <label for="education">Education:</label>
+        <input type="text" id="education" required />
+
+        <h3>Skills</h3>
+        <label for="skills">Skills (comma separated):</label>
+        <input type="text" id="skills" required />
+
+        <h3>Work Experience</h3>
+        <label for="experience">Job Title:</label>
+        <input type="text" id="experience" required />
+        <label for="description">Job Description:</label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <script src="./app.js"></script>
+</body>
+</html>
